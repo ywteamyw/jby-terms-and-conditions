@@ -192,6 +192,19 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
 .back-top:hover{background:#000}
 .back-top svg{width:20px;height:20px;display:block;transform:rotate(-90deg)}
 
+/* Legal bar: copyright + the three legal pages, closing the footer */
+.foot-legal{max-width:1440px;margin:56px auto 0;padding-top:40px;border-top:0.5px solid var(--line);
+  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:14px 32px}
+footer:has(.foot-legal){padding-bottom:40px}
+.foot-legal .copy{font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:15px;line-height:24px;color:var(--mute);margin:0}
+.foot-legal nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;
+  font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:15px;line-height:24px}
+.foot-legal nav a{color:var(--mute);transition:color .2s}
+.foot-legal nav a:hover{color:var(--navy)} /* colour only, no move */
+.foot-legal nav .sep{color:var(--mute);opacity:0.4}
+.foot-legal nav [aria-current="page"]{color:var(--ink)}
+
+
 /* ============ REVEAL ============ */
 .reveal{opacity:0;transform:translate3d(0,40px,0);transition:opacity .6s cubic-bezier(0.22,1,0.36,1),transform .6s cubic-bezier(0.22,1,0.36,1)}
 .reveal.in{opacity:1;transform:translate3d(0,0,0)}
@@ -238,6 +251,8 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
   .foot-col{padding-top:0}
   footer{padding:40px 24px 64px}
   .back-top{display:none}
+  .foot-legal{margin-top:40px}
+  .foot-legal nav{width:100%}
 }
 @media (max-width:520px){
   .pp-doc{max-width:none}
@@ -252,6 +267,8 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
 }
 @media (max-width:560px){
   /* info@jeffbrownyachts.com is one unbreakable token in uppercase Mesmerize */
+  .foot-legal nav{flex-direction:column;gap:9px}
+  .foot-legal nav .sep{display:none}
   .foot-grid{grid-template-columns:minmax(0,1fr)}
   .foot-col p{font-size:14px;line-height:20px;overflow-wrap:break-word}
 }
@@ -375,6 +392,17 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
       </nav>
     </div>
   </div>
+  <div class="foot-legal">
+    <p class="copy">&copy; Jeff Brown Yachts, Inc. All Rights Reserved</p>
+    <nav aria-label="Legal">
+      <a href="https://ywteamyw.github.io/jby-privacy-policy/">Privacy Policy</a>
+      <span class="sep">|</span>
+      <span aria-current="page">Terms and Conditions</span>
+      <span class="sep">|</span>
+      <a href="https://ywteamyw.github.io/jby-statement-of-information/">Statement of Information</a>
+    </nav>
+  </div>
+
   <button class="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M13.9842 10.6509L7.7342 16.9009C7.67613 16.9589 7.60719 17.005 7.53132 17.0364C7.45545 17.0679 7.37414 17.084 7.29201 17.084C7.20989 17.084 7.12857 17.0679 7.0527 17.0364C6.97683 17.005 6.9079 16.9589 6.84983 16.9009C6.79176 16.8428 6.74569 16.7739 6.71427 16.698C6.68284 16.6221 6.66667 16.5408 6.66667 16.4587C6.66667 16.3766 6.68284 16.2952 6.71427 16.2194C6.74569 16.1435 6.79176 16.0746 6.84983 16.0165L12.6584 10.2087L6.84983 4.40087C6.73255 4.28359 6.66667 4.12453 6.66667 3.95868C6.66667 3.79283 6.73255 3.63377 6.84983 3.51649C6.9671 3.39922 7.12616 3.33333 7.29201 3.33333C7.45787 3.33333 7.61693 3.39922 7.7342 3.51649L13.9842 9.76649C14.0423 9.82454 14.0884 9.89347 14.1199 9.96934C14.1513 10.0452 14.1675 10.1265 14.1675 10.2087C14.1675 10.2908 14.1513 10.3721 14.1199 10.448C14.0884 10.5239 14.0423 10.5928 13.9842 10.6509Z"/></svg></button>
 </footer>
 
