@@ -70,7 +70,7 @@ main{padding-top:128px}
 .pp-meta div{flex:1 1 220px;padding:22px 28px}
 .pp-meta div + div{box-shadow:inset 1px 0 0 rgba(0,0,0,0.05)}
 .pp-meta dt{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:12px;line-height:18px;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--label);margin:0 0 7px}
+  text-transform:uppercase;color:#111;margin:0 0 7px}
 .pp-meta dd{font-family:'Myriad Pro',sans-serif;font-weight:400;font-size:16px;line-height:24px;color:var(--ink);margin:0}
 .pp-meta dd span{display:block;font-weight:300;color:var(--mute)}
 .pp-meta dd a{color:var(--navy);box-shadow:inset 0 -1px 0 rgba(65,100,123,0.35);transition:color .2s, box-shadow .2s}
@@ -96,14 +96,14 @@ main{padding-top:128px}
   text-transform:uppercase;color:var(--mute);margin:0 0 18px}
 .pp-toc{list-style:none;margin:0;padding:0;counter-reset:toc}
 .pp-toc li{counter-increment:toc}
-.pp-toc a{display:grid;grid-template-columns:34px 1fr;gap:4px;align-items:baseline;padding:8px 0;
-  font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:15px;line-height:21px;color:#6a6a74;transition:color .2s}
-.pp-toc a::before{content:counter(toc);font-family:'Mesmerize',sans-serif;font-size:12px;
-  letter-spacing:0.06em;color:#b3b3bb;font-variant-numeric:tabular-nums;transition:color .2s}
+.pp-toc a{display:grid;grid-template-columns:14px 1fr;gap:10px;align-items:baseline;padding:9px 0;
+  font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:16px;line-height:24px;color:#4c4c57;transition:color .2s}
+.pp-toc a::before{content:counter(toc);font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:16px;
+  line-height:24px;color:#6a6a74;font-variant-numeric:tabular-nums;transition:color .2s}
 .pp-toc a:hover{color:#111}
-.pp-toc a:hover::before{color:var(--navy)}
+.pp-toc a:hover::before{color:#111}
 .pp-toc a.on{color:#111;font-weight:400}
-.pp-toc a.on::before{color:var(--navy)}
+.pp-toc a.on::before{color:#111}
 
 /* Mobile contents (collapsible) */
 .pp-toc-m{display:none}
@@ -126,8 +126,8 @@ main{padding-top:128px}
 .pp-defs{margin:26px 0 0;padding:0}
 .pp-def{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:22px 0;align-items:start}
 .pp-def + .pp-def{box-shadow:inset 0 1px 0 var(--line)}
-.pp-def dt{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:13px;line-height:24px;letter-spacing:0.08em;
-  text-transform:uppercase;color:#62626c;margin:0}
+.pp-def dt{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:14px;line-height:24px;letter-spacing:0.09em;
+  text-transform:uppercase;color:#111;margin:0}
 .pp-def dd{margin:0;font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:17px;line-height:30px;color:#4c4c57}
 
 /* Soft tinted note (no decorative rules) */
@@ -135,7 +135,7 @@ main{padding-top:128px}
 .pp-note p{font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:16px;line-height:28px;color:#4c4c57;margin:0}
 .pp-note p + p{margin-top:14px}
 .pp-note .nh{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:12px;letter-spacing:0.12em;
-  text-transform:uppercase;color:var(--label);display:block;margin:0 0 9px}
+  text-transform:uppercase;color:#111;display:block;margin:0 0 9px}
 
 /* Commitment list (CAN-SPAM) */
 .pp-checks{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:26px 0 0;list-style:none;padding:0}
@@ -148,7 +148,7 @@ main{padding-top:128px}
 .pp-card{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:30px 34px 32px;margin:26px 0 0}
 .pp-card-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:34px}
 .pp-card h3{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:12px;line-height:18px;letter-spacing:0.12em;
-  text-transform:uppercase;color:var(--label);margin:0 0 12px}
+  text-transform:uppercase;color:#111;margin:0 0 12px}
 .pp-card .mail{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:16px;line-height:26px;letter-spacing:0;
   color:var(--ink);display:inline-flex;align-items:center;gap:10px;transition:color .2s;word-break:break-word}
 .pp-card .mail svg{width:16px;height:16px;color:var(--label-2);flex:none}
@@ -192,20 +192,6 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
 .back-top:hover{background:#000}
 .back-top svg{width:20px;height:20px;display:block;transform:rotate(-90deg)}
 
-/* Legal bar: copyright + the three legal pages, closing the footer */
-.foot-legal{max-width:1440px;margin:56px auto 0;padding-top:40px;border-top:0.5px solid var(--line);
-  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:14px 32px}
-/* the bar owns the footer's closing rhythm: the gap above the copyright line and the gap
-   below it are both 40px. Only applies to pages that actually carry the bar. */
-footer:has(.foot-legal){padding-bottom:40px}
-.foot-legal .copy{font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:15px;line-height:24px;color:var(--mute);margin:0}
-.foot-legal nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 10px;
-  font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:15px;line-height:24px}
-.foot-legal nav a{color:var(--mute);transition:color .2s}
-.foot-legal nav a:hover{color:var(--navy)} /* colour only, no move */
-.foot-legal nav .sep{color:var(--mute);opacity:0.4}
-.foot-legal nav [aria-current="page"]{color:var(--ink)}
-
 /* ============ REVEAL ============ */
 .reveal{opacity:0;transform:translate3d(0,40px,0);transition:opacity .6s cubic-bezier(0.22,1,0.36,1),transform .6s cubic-bezier(0.22,1,0.36,1)}
 .reveal.in{opacity:1;transform:translate3d(0,0,0)}
@@ -238,7 +224,7 @@ footer:has(.foot-legal){padding-bottom:40px}
   .pp-toc-m summary{list-style:none;cursor:pointer;padding:18px 0;font-family:'Mesmerize',sans-serif;font-weight:300;
     font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:#111;display:flex;align-items:center;justify-content:space-between}
   .pp-toc-m summary::-webkit-details-marker{display:none}
-  .pp-toc-m summary svg{width:16px;height:16px;color:var(--label);transition:transform .25s}
+  .pp-toc-m summary svg{width:16px;height:16px;color:#6a6a74;transition:transform .25s}
   .pp-toc-m[open] summary svg{transform:rotate(90deg)}
   .pp-toc-m .pp-toc{padding-bottom:14px}
   .pp-sec h2{font-size:22px;line-height:32px}
@@ -263,13 +249,9 @@ footer:has(.foot-legal){padding-bottom:40px}
    so on a 360px screen it stretches the footer's 1fr track past the viewport and the whole page
    scrolls sideways. One size step down clears it. Same one-line fix applies to the Privacy Policy page. */
 @media (max-width:980px){
-  .foot-legal{margin-top:40px}
-  .foot-legal nav{width:100%}
 }
 @media (max-width:560px){
-  /* one legal page per line — wrapping the inline list left a dangling "|" at the line break */
-  .foot-legal nav{flex-direction:column;gap:9px}
-  .foot-legal nav .sep{display:none}
+  /* info@jeffbrownyachts.com is one unbreakable token in uppercase Mesmerize */
   .foot-grid{grid-template-columns:minmax(0,1fr)}
   .foot-col p{font-size:14px;line-height:20px;overflow-wrap:break-word}
 }
@@ -394,19 +376,6 @@ footer:has(.foot-legal){padding-bottom:40px}
     </div>
   </div>
   <button class="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M13.9842 10.6509L7.7342 16.9009C7.67613 16.9589 7.60719 17.005 7.53132 17.0364C7.45545 17.0679 7.37414 17.084 7.29201 17.084C7.20989 17.084 7.12857 17.0679 7.0527 17.0364C6.97683 17.005 6.9079 16.9589 6.84983 16.9009C6.79176 16.8428 6.74569 16.7739 6.71427 16.698C6.68284 16.6221 6.66667 16.5408 6.66667 16.4587C6.66667 16.3766 6.68284 16.2952 6.71427 16.2194C6.74569 16.1435 6.79176 16.0746 6.84983 16.0165L12.6584 10.2087L6.84983 4.40087C6.73255 4.28359 6.66667 4.12453 6.66667 3.95868C6.66667 3.79283 6.73255 3.63377 6.84983 3.51649C6.9671 3.39922 7.12616 3.33333 7.29201 3.33333C7.45787 3.33333 7.61693 3.39922 7.7342 3.51649L13.9842 9.76649C14.0423 9.82454 14.0884 9.89347 14.1199 9.96934C14.1513 10.0452 14.1675 10.1265 14.1675 10.2087C14.1675 10.2908 14.1513 10.3721 14.1199 10.448C14.0884 10.5239 14.0423 10.5928 13.9842 10.6509Z"/></svg></button>
-  <!-- Legal bar. Statement of Information points at its live page; Privacy Policy stays a
-       placeholder until that page is deployed. On the real site both become /privacy-policy
-       and /statement-of-information. Terms is the current page, so it is marked, not linked. -->
-  <div class="foot-legal">
-    <p class="copy">&copy; Jeff Brown Yachts, Inc. All Rights Reserved</p>
-    <nav aria-label="Legal">
-      <a href="#">Privacy Policy</a>
-      <span class="sep">|</span>
-      <span aria-current="page">Terms and Conditions</span>
-      <span class="sep">|</span>
-      <a href="https://ywteamyw.github.io/jby-statement-of-information/">Statement of Information</a>
-    </nav>
-  </div>
 </footer>
 
 <script>
