@@ -98,7 +98,7 @@ main{padding-top:128px}
 .pp-toc li{counter-increment:toc}
 .pp-toc a{display:grid;grid-template-columns:34px 1fr;gap:4px;align-items:baseline;padding:8px 0;
   font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:15px;line-height:21px;color:#6a6a74;transition:color .2s}
-.pp-toc a::before{content:counter(toc,decimal-leading-zero);font-family:'Mesmerize',sans-serif;font-size:12px;
+.pp-toc a::before{content:counter(toc);font-family:'Mesmerize',sans-serif;font-size:12px;
   letter-spacing:0.06em;color:#b3b3bb;font-variant-numeric:tabular-nums;transition:color .2s}
 .pp-toc a:hover{color:#111}
 .pp-toc a:hover::before{color:var(--navy)}
@@ -112,8 +112,6 @@ main{padding-top:128px}
 .pp-doc{max-width:780px}
 .pp-sec{scroll-margin-top:124px}
 .pp-sec + .pp-sec{margin-top:64px}
-.pp-kicker{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:12px;line-height:18px;letter-spacing:0.14em;
-  text-transform:uppercase;color:var(--idx);margin:0 0 4px;font-variant-numeric:tabular-nums}
 .pp-sec h2{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:28px;line-height:38px;letter-spacing:0;
   text-transform:uppercase;color:#111;margin:0 0 18px}
 .pp-sec p{font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:17px;line-height:30px;color:#4c4c57;margin:0 0 18px}
@@ -338,14 +336,12 @@ footer:has(.foot-legal){padding-bottom:40px}
     <div class="pp-doc">
 
       <article class="pp-sec reveal" id="information">
-        <p class="pp-kicker">01</p>
-        <h2>Information on the website</h2>
+        <h2>1. Information on the website</h2>
         <p>Although Jeff Brown Yachts makes reasonable efforts to ensure that all information included on the website is correct, Jeff Brown Yachts cannot assure the accuracy, completeness, and timeliness of the information, and Jeff Brown Yachts does not assume any responsibility or obligation for the accuracy, completeness, or timeliness of information included on this website.</p>
       </article>
 
       <article class="pp-sec reveal" id="availability">
-        <p class="pp-kicker">02</p>
-        <h2>The availability of certain products, services, or options</h2>
+        <h2>2. The availability of certain products, services, or options</h2>
         <p>Jeff Brown Yachts does not represent or warrant that any product, service, or option depicted or mentioned on the website is currently available for sale. Regardless of any information presented on the website, Jeff Brown Yachts reserves the right, without prior notice, to change the prices, as well as the products and services.</p>
         <p>Not all products are available in all models and colors. Model-year boats may not contain all the options or meet the specifications described on the website.</p>
         <p><strong>Confirm the specification of your product as well as the availability of all options, accessories and equipment with your authorized Jeff Brown Yachts Sales Agent prior to purchase.</strong></p>
